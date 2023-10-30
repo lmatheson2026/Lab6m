@@ -36,10 +36,24 @@ public class SearchEngine {
             {
                 // Here you should get the corresponding TF and IDF values of that query word
                 // And then modify the code to calculate the TF-IDF value
+            	
+            	
+                TreeMap<String, Double> termFrequencies = TFValues.get(songTitle);
+                Double tf = termFrequencies.get(queryWord);
+                
                 
                 // Score for a song, is summation of TF*IDF values for each query word
                 // Note that IDF are global and not related to a specific song
                 // But TF values for a query word is different among different songs
+                
+                Double idf = IDFValues.get(queryWord);
+                if(tf != null && idf != null) {
+               
+                	 double tfidf = tf * idf;
+
+                     // Add the TF-IDF value to the total score for the current song
+                     score += tfidf;
+                 }
                 
                 ////////////////////////////
                 //WRITE HERE
