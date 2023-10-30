@@ -1,4 +1,4 @@
-package Lab6;
+package Lab6; // herve Eden Badege
 
 import java.util.TreeMap;
 
@@ -55,9 +55,7 @@ public class SearchEngine {
                      score += tfidf;
                  }
                 
-                ////////////////////////////
-                //WRITE HERE
-                //////////////////////////
+                
             }
             
             if (score>maxScore)
